@@ -10,9 +10,23 @@ We then compiled the code using NVHPC and GNU GCC with no optimization flags, -O
 
 GNU GCC:
 
-To compile the code using GNU GCC, run the following command:
-gcc <optimization flag> -fopenmp <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
+To compile the code using GNU GCC, first install the GCC Module on Bridges2 using the command: 
+  module load gcc/10.2.0
+
+Then enter following command:
+  gcc <optimization flag> -fopenmp <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
+
+NVHPC:
+To compile the code using NVHPC, first install the NVHPC Module on Bridges2 using the command:
+  module load nvhpc/21.7
   
-To run the code using the batch scripts provided change the email address on line 5 and run the following commands:
-export OMP_NUM_THREADS=<1,2,4, or 8>
-sbatch <serial, twothread, fourthread, or eightthread>.sh
+Then enter following command:
+  nvc <optimization flag> -mp=multicore <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread>
+  
+To run the code using the batch script provided, change the email address on line 5 and run the following commands:
+
+RUN THIS COMMAND FIRST:
+  export OMP_NUM_THREADS=<1,2,4, or 8>
+
+THEN:
+  sbatch que.bat
