@@ -10,5 +10,4 @@
 
 #SBATCH -t 01:00:00	# set maximum run time of 30 minutes
 
-./heatPara 2048 2048 100000 serial.out
-
+<COMMAND HERE>
