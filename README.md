@@ -19,15 +19,15 @@ To compile the code using GNU GCC, first install the GCC Module on Bridges2 usin
   gcc <optimization flag> -fopenmp <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
 
 **NVHPC:**
-To compile the code using NVHPC, first install the NVHPC Module on Bridges2 using the command:
+**To compile the code using NVHPC, first install the NVHPC Module on Bridges2 using the command**:
   
   module load nvhpc/21.7
   
-Then enter following command:
+**Then enter following command:**
   
   nvc <optimization flag> -mp=multicore <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread>
   
-To run the code using the batch script provided, change the email address on line 5 and run the following commands:
+**To run the code using the batch script provided, change the email address on line 5 and run the following commands:**
 
 **RUN THIS COMMAND FIRST**:
   
