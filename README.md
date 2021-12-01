@@ -8,17 +8,17 @@ https://cdn-uploads.piazza.com/paste/is6hj59dz8a6n/ed26f861a603adef9153c15f0fbbd
 We parallelized the serial code in the study above with OpenMP. 
 We then compiled the code using NVHPC and GNU GCC with no optimization flags, -O1, -O2, and -O3.
 
-GNU GCC:
+**GNU GCC:**
 
 To compile the code using GNU GCC, first install the GCC Module on Bridges2 using the command: 
 
   module load gcc/10.2.0
 
-Then enter following command:
+**Then enter following command:**
 
   gcc <optimization flag> -fopenmp <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
 
-NVHPC:
+**NVHPC:**
 To compile the code using NVHPC, first install the NVHPC Module on Bridges2 using the command:
   
   module load nvhpc/21.7
@@ -29,10 +29,10 @@ Then enter following command:
   
 To run the code using the batch script provided, change the email address on line 5 and run the following commands:
 
-RUN THIS COMMAND FIRST:
+**RUN THIS COMMAND FIRST**:
   
   export OMP_NUM_THREADS=<1,2,4, or 8>
 
-THEN:
+**THEN:**
   
   sbatch que.bat
