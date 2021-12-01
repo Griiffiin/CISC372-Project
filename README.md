@@ -10,7 +10,7 @@ We then compiled the code using NVHPC and GNU GCC with no optimization flags, -O
 
 **GNU GCC:**
 
-To compile the code using GNU GCC, first install the GCC Module on Bridges2 using the command: 
+**To compile the code using GNU GCC, first install the GCC Module on Bridges2 using the command**: 
 
   module load gcc/10.2.0
 
