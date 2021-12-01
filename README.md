@@ -26,13 +26,19 @@ We then compiled the code using NVHPC and GNU GCC with no optimization flags, -O
   
     Then enter following command:
   
-      nvc <optimization flag> -mp=multicore <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread>
+      nvc <optimization flag> <-mp=multicore> <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
+
+**BATCH SCRIPT**
+
+     To submit a job, in the <COMMAND HERE> space at the end of que.bat, enter the command:
+     
+       ./<serial, twothread, fourthread, or eightthread> <nj(ex. 2048)> <ni(ex. 2048)> <nsteps(ex. 10000)> <outputfile.out>  
     
 **ENVIRONMENT SETUP**    
     
     To run the code using the batch script provided, change the email address on line 5 and run the following commands:
 
-      RUN THIS COMMAND FIRST:
+     RUN THIS COMMAND FIRST:
   
       export OMP_NUM_THREADS=<1,2,4, or 8>
 
