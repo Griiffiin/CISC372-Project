@@ -11,7 +11,7 @@ We then compiled the code using NVHPC and GNU GCC with no optimization flags, -O
 GNU GCC:
 
 To compile the code using GNU GCC, run the following commands:
-gcc <optimization flag> -fopenmp 2DHeat<serial or parallelized>.c -o <serial, twothread, fourthread, or eightthread> 
+gcc <optimization flag> -fopenmp <heat_Para.c or heat_serial.c> -o <serial, twothread, fourthread, or eightthread> 
   
 To run the code using the batch scripts provided change the email address on line 5 and run the following commands:
 export OMP_NUM_THREADS=<1,2,4, or 8>
